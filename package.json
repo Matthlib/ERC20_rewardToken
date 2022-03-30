@@ -1,0 +1,31 @@
+{
+  "name": "ERC20Token",
+  "description": "ERC20Token on Avalanche",
+  "version": "1.0.0",
+  "main": "hardhat.config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.4",
+    "@nomiclabs/hardhat-waffle": "^2.0.2",
+    "chai": "^4.3.4",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.5.3",
+    "hardhat": "^2.8.3",
+    "mocha": "^9.2.2"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.4.2",
+    "@traderjoe-xyz/core": "^2.2.1",
+    "@uniswap/v2-core": "^1.0.1",
+    "dotenv": "^16.0.0",
+    "hardhat-abi-exporter": "^2.8.0",
+    "hardhat-contract-sizer": "^2.4.0"
+  }
+}
