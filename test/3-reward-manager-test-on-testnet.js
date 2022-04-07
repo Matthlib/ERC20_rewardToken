@@ -61,19 +61,22 @@ describe("NODERewardManagement", function () {
     // addrs.map(v => {
     //   console.log('address', v.address);
     // })
-    
+    const PolarNodes = await ethers.getContractFactory("PolarNodes", owner);
 
     const IterableMapping = await ethers.getContractFactory("IterableMapping");
     iterableMapping = await IterableMapping.attach('0x19cf9553EF064A4f2669d4a045388765A77D4643');
     const IterableNodeTypeMapping = await ethers.getContractFactory("IterableNodeTypeMapping");
     iterableNodeTypeMapping = await IterableNodeTypeMapping.attach('0x48846a44B74915B8adFed135D705173AFfC9cE09');
 
-    const NODERewardManagement = await ethers.getContractFactory("NODERewardManagement", {
-      libraries: {
-        IterableMapping: iterableMapping.address,
-        IterableNodeTypeMapping: iterableNodeTypeMapping.address,
+   const NODERewardManagement = await ethers.getContractFactory("NODERewardManagement",
+      {
+        libraries: {
+          IterableMapping: iterableMapping.address,
+          IterableNodeTypeMapping: iterableNodeTypeMapping.address,
+        },
       },
-    });
+      owner
+    );
     rewardManager = await NODERewardManagement.attach('0x5C0FC0b1166F8145E7b1AA74d691F51bc86dc55B');
     // await rewardManager.deployed();
 

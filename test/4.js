@@ -144,8 +144,9 @@ describe("NODERewardManagement", function () {
       // (rewardsPoolTokens - (rwSwap calc) sent to distributionPool) tokens
     ];
     const swapAmount = 50;
-    const uniV2Router = '0x60ae616a2155ee3d9a68541ba4544862310933d4';
-
+    // for avax const uniV2Router = '0x60ae616a2155ee3d9a68541ba4544862310933d4';
+    // for metis const uniV2Router = '0x81b9fa50d5f5155ee17817c21702c3ae4780ad09';
+    const uniV2Router = '0x81b9fa50d5f5155ee17817c21702c3ae4780ad09';
     polarNodes = await PolarNodes.deploy(
       payees,
       shares,

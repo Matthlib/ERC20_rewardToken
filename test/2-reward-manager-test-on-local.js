@@ -54,9 +54,9 @@ describe("NODERewardManagement", function () {
 
   beforeEach(async function () {
     addrs = await ethers.getSigners();
-     console.log('Count:', addrs.length)
+     //console.log('Count:', addrs.length)
      addrs.map(v => {
-       console.log('address', v.address);
+      //console.log('address', v.address);
      })
     
 
@@ -88,9 +88,10 @@ describe("NODERewardManagement", function () {
     /////////////// add NodeTypes and retrieve them to check ///////////////
     let tx, result;
     let nodeTypesResult;
-    nodeTypesResult = await rewardManager.getNodeTypes();
-    // console.log('nodeTypesResult:', nodeTypesResult);
-    // console.log('nodeTypesResult:', typeof(nodeTypesResult));
+    console.log("toto");    
+     nodeTypesResult //= await rewardManager.getNodeTypes();
+    console.log('nodeTypesResult:', nodeTypesResult);
+    console.log('nodeTypesResult:', typeof(nodeTypesResult));
     expect(nodeTypesResult).to.equal('');   // there is not NodeType so the result should be an empty string
 
     tx = await rewardManager.addNodeType('Axe', 1, 10, 10, 10, "", 0);
